@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
+import os
 
 
 app = FastAPI()
@@ -19,3 +21,6 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+
+uvicorn.run(app, host="0.0.0.0", port=os.getenv("PORT", 8000))
