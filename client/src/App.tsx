@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect } from 'react';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://testfastapi-m2746x2ydq-uc.a.run.app/',
 });
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       console.log(res.data)
     });
   });
-  
+
   return (
     <>
     <h1>Test</h1>
